@@ -20,6 +20,14 @@ pip install -r requirements-dev.txt
 ```sh
 python3 main.py
 ```
+#### Pour aller plus loin : 
+
+ Quels sont les éléments à considérer pour faire évoluer votre code afin qu’il puisse gérer de grosses volumétries de données (fichiers de plusieurs To ou millions de fichiers par exemple) ?
+ 
+- Pour pouvoir traiter des grosses volumétries des données, On peut utiliser des frameworks de traitement parallèle des datèrent frames et des données comme Pyspark ou Hadoop, ou des services cloud comme Dataflow qui vont permettre de paralléliser les traitements.
+
+- Découper les étapes de traitement le plus possible pour avoir des briques parallélisable 
+
 
 #### SQL Questions : 
 
