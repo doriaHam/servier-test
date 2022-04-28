@@ -1,5 +1,5 @@
 import pandas as pd
-from config import DATASETS_MENTION, TITLE_COLUMN, DATASET_DRUGS
+from config import DATASETS_MENTION, TITLE_COLUMN, DATASET_DRUGS,DATA_REPOSITORY_OUTPUT
 import json
 
 
@@ -59,6 +59,7 @@ def genrate_json_file(dataframe):
     dataframe.drop(["atccode", "id"], axis=1, inplace=True)
     dataframe.set_index('index', inplace=True)
     result = dataframe.to_dict(orient='index')
-    with open("result.json", "w") as file:
+    
+    with open(DATA_REPOSITORY_OUTPUT+"/reslut.json", "w") as file:
         json.dump(result, file)
-    return result
+    return result, DATA_REPOSITORY_OUTPUT
